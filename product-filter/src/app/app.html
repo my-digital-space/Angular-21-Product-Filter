@@ -1,1 +1,22 @@
-<div>Hello World!</div>
+<div class="app-root">
+    <h1 class="app-title">{{ title }}</h1>
+
+    <div class="layout">
+
+        <!-- left pane with filters (centered column) -->
+        <aside class="left-panel">
+            <app-filters [filterType]="'gender'" [filterValues]="genders" (filterSelected)="onGenderSelected($event)">
+            </app-filters>
+
+            <app-filters [filterType]="'category'" [filterValues]="categories"
+                (filterSelected)="onCategorySelected($event)">
+            </app-filters>
+        </aside>
+
+        <!-- right pane with product list (grid rendered as <ul>) -->
+        <main class="right-panel">
+            <app-product-list [products]="filteredProducts"></app-product-list>
+        </main>
+
+    </div>
+</div>

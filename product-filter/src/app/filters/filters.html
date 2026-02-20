@@ -1,0 +1,14 @@
+<div class="filter-card">
+    <div class="filter-header">
+        <span class="filter-title">
+            {{ filterType === 'gender' ? 'Gender' : 'Category' }}
+        </span>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="{{filterType}} filters">
+        <button *ngFor="let val of filterValues" (click)="onFilterClick(val)" [class.active]="selectedValue === val"
+            class="tab-button" type="button" aria-pressed="{{ selectedValue === val }}">
+            {{ displayLabel(val) }}
+        </button>
+    </div>
+</div>

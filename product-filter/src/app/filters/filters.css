@@ -1,0 +1,56 @@
+.filter-card {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(13, 38, 59, 0.06);
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.filter-title {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #0f172a;
+}
+
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab-button {
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: none;
+    transition: all 150ms ease;
+    min-width: 70px;
+    text-align: center;
+}
+
+/* active style */
+.tab-button.active {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    color: white;
+    box-shadow: 0 6px 14px rgba(124, 58, 237, 0.12);
+    border: none;
+}
+
+/* hover */
+.tab-button:hover {
+    transform: translateY(-2px);
+}

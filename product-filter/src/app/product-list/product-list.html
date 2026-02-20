@@ -1,0 +1,36 @@
+<section class="product-table-wrapper">
+
+    <div class="table-header">
+        <h2>Products</h2>
+        <p class="sub">
+            Showing {{ products.length }} item{{ products.length === 1 ? '' : 's' }}
+        </p>
+    </div>
+
+    <table *ngIf="products.length > 0" class="product-table" data-test-id="product-list">
+
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Gender</th>
+                <th>Brand</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{ p.title }}</td>
+                <td>{{ p.category | titlecase }}</td>
+                <td>{{ p.gender | titlecase }}</td>
+                <td>{{ p.brand }}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <div *ngIf="products.length === 0" class="empty">
+        No products match the selected filters.
+    </div>
+
+</section>
