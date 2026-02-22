@@ -1,0 +1,15 @@
+<div class="filterContainer">
+
+  <h3>{{categoryHeaderString}}</h3>
+  <div class="subFilters">
+    <div 
+      class="subItem"
+      *ngFor="let category of categoriesList;"
+      [class.active]="selectedFilter === category"
+      (click)="toggleFilter(category)"
+      >
+      {{ category }}
+    </div>
+  </div>
+
+</div>

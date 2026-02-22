@@ -1,0 +1,41 @@
+.mainDiv {
+    border: 1px solid black;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Make children side by side */
+.row {
+    display: flex;
+    width: 100%;
+}
+
+/* 30% width */
+.component1 {
+    width: 30%;
+    border: 1px solid gray;
+}
+
+/* 70% width */
+.component2 {
+    width: 70%;
+    border: 1px solid gray;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
